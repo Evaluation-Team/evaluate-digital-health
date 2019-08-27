@@ -1,0 +1,207 @@
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141128254-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141128254-1');
+</script>
+
+{{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-navigation.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+  stepByStepNavigation.start($element)
+</script>
+{% endblock %} {% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="index.html">Evaluate Digital Health</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Map your user journey</li>
+  </ol>
+</div>
+<div class="govuk-column-full">
+
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Map your user journey</h1>
+
+    <p>A user journey is a simple timeline from left to right, showing how your users interact with your health product at different stages. You can then link these interactions to the health outcomes of your health product.</p>
+    <p>Health outcomes are changes that are intentionally produced by a health product to improve a user’s health.</p>
+
+    <h2 class="govuk-heading-m">How a user journey supports your evaluation</h2>
+    <p>Develop a user journey to get an overview of how your health product meets user needs and achieves its intended health outcomes over time. Creating a user journey will help you align your user needs and how they interact with your product with your intended health outcomes. </p>
+
+<div class="filter-results-box">
+    <h2 class="govuk-heading-m">Case study: Couch to 5K</h2>
+    <p>The Couch to 5K team started by considering the different stages in their users’ relationship with the app – from being completely unaware of it to where they stop using it, and the important moments in between.</p>
+    <p>This helped them think about how the app's activities meet the users’ needs, and how they could achieve their intended health outcomes. </p>
+    <p>For example, the team know their users need to stay motivated when using the app. To meet this need, the app provides motivational messages and bonus incentives. This targets the health outcome 'the user is confident enough to go for a run'.</p>
+
+    <img src="public/images/service-journey.png" alt="service-journey.png" style="max-width:570px;">
+    <p> </p>
+</div>
+
+    <h2 class="govuk-heading-m">How to map your user journey</h2>
+
+    <h3 class="govuk-heading-s">Step 1: Map the user’s journey through your service<h3>
+    <p>You can create a user journey for an existing health product, or for an entirely new one. You can create a user journey during a face-to-face or online workshop.</p>
+    <p>The evaluation lead for your health product or another team member should facilitate the user journey workshop and ensure the outputs are written up and shared with the team.</p>
+    <p>Your research should help you understand who your users are, their needs and how they could potentially use your health product.</p>
+    <p>You should work with your stakeholders to understand the different stages of your user journey, and which user needs are met at each stage. As you do this, map the relevant user needs to the appropriate stage. </p>
+    <p>This activity will help you understand the health product from the user’s point of view, and establish the most important touchpoints in their journey.</p>
+
+    <h3 class="govuk-heading-s">Step 2: Map the health outcomes to the user journey <h3>
+    <p>As you develop your health product, you will need to reach a clear understanding of your service’s actions, or what your product does for the user, at each stage of the user journey. </p>
+    <p>Work with your team to bring together all the information you have about what the product does and map these actions to the user journey. </p>
+
+
+    <h3 class="govuk-heading-s">Step 3: Map the service actions to the user journey<h3>
+    <p>Once you know the health outcomes of your health product, you can start thinking about how these relate to the user and the user journey.</p>
+    <p>You then need to map the short, medium and long-term health outcomes from your logic model to the user journey.</p>
+    <p>Don’t worry if you cannot map all of the health outcomes. Some medium and long-term health outcomes, such as ‘reduction in cardiovascular diseases in the United Kingdom’, will not be measurable during the product journey.</p>
+
+  <a href="/public/images/userjourneytemplate.pdf" download role="button" class="govuk-button">Download printable user journey template</a>
+</div>
+  <!--side menu-->
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section menu-vertical-line">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              1. Get started
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class='govuk-body'>Get started with evaluation with your team.</p>
+              <p><a href="preparetoevaluate.html">Prepare for evaluation</a></p>
+              <p><a href="howtobudget.html">Budget for evaluation</a></p>
+              <p><a href="buildyourteam.html">Build your team</a></p>
+              <p><a href="jointhecommunity.html">Join the evaluation community</a></p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section menu-vertical-line-blue">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2" style="color: black;">
+                2. Define outcomes
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <p class='govuk-body'>Use a logic model and user journey to define your product's intended health outcomes with your team.</p>
+            <p><a href="logicmodel.html">Create a logic model</a></p>
+            <p class="selected-menu"><a href="userjourney.html">Map your user journey</a></p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section menu-vertical-line">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                3. Choose success indicators
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <p class='govuk-body'>Identify which indicators will help you understand how your digital health intervention affect its intended health outcomes. Consider what data you’ll need to collect.</p>
+            <p><a href="indicators.html">Choose success indicators</a></p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section menu-vertical-line">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                4. Choose your methods
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content " aria-labelledby="accordion-default-heading-4">
+            <p class='govuk-body'>Decide which evaluation methods are most appropriate for your health product.</p>
+            <p><a href="choosemethods.html">Choose your methods</a></p>
+            <p><a href="browsemethods.html">Browse evaluation methods</a></p>
+          </div>
+        </div>
+      <div class="govuk-accordion__section menu-vertical-line">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              5. Analyse your data
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <p class='govuk-body'>How to analyse the data you've collected using your methods.</p>
+          <p><a href="analyseyourdata.html">Analyse your data</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--side menu-->
+
+  <!--Previous / Next Buttons -->
+          <div class="previous-page">
+              <p>
+                <a href="logicmodel.html" >
+                <div class="previous-arrow" style="float: left;"><svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="22" width="25" viewBox="0 0 17 13">
+              <path fill="#1D70B8" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"/>
+          </svg></div>
+            <div class="arrow-text" style="float: left; margin-left: 20px; font-size: 24px;">
+            <b>Previous step</b><br><span style="text-decoration: underline; font-size: 19px;">Create a logic model</span></div>
+              </a>
+              </p>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="next-page">
+                  <p>
+                    <a href="indicators.html" >
+                    <div class="next-arrow" style="float: left;"><svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="22" width="25" viewBox="0 0 17 13">
+                  <path fill="#1D70B8" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"/>
+              </svg></div>
+                <div class="arrow-text" style="float: left; margin-left: 20px; font-size: 24px;">
+                <b>Next step</b><br><span style="text-decoration: underline; font-size: 19px;">Choose success indicators</span></div>
+                  </a>
+                  </p>
+                </div>
+                <br>
+                <br>
+  <!--Previous / Next Buttons -->
+
+  </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  </div>
+  </div>
+  {% endblock %}
+  <!--navigation-->

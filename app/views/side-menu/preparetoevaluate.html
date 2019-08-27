@@ -1,0 +1,164 @@
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141128254-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141128254-1');
+</script>
+
+{{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-navigation.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+  stepByStepNavigation.start($element)
+</script>
+{% endblock %} {% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="index.html">Evaluate Digital Health</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Prepare for evaluation</li>
+  </ol>
+</div>
+<div class="govuk-column-full">
+
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Prepare for evaluation</h1>
+
+    <p>Evaluation is essential to finding out what works and what does not work.</p>
+    <p>You need to decide on the amount of budget, people and time you can dedicate to evaluating your health product. It’s important that you evaluate your health product so you can improve it – but the scope of your evaluation will depend on certain conditions. For example, you should consider:</p>
+    <ul class="govuk-list govuk-list--bullet">
+    <li>carrying out an in-depth evaluation if your product is of high political scrutiny</li>
+    <li>conducting a lighter evaluation if your product is based on existing evidence</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Evaluating new health products</h2>
+    <p>It’s particularly important to conduct an evaluation for a new health product when one or more of the following criteria are met because:</p>
+    <ul class="govuk-list govuk-list--bullet">
+    <li>there has been a significant investment of time, budget and resources</li>
+    <li>there’s a possibility of risk or harm to the user’s health or wellbeing</li>
+    <li>the health product is the subject of high political scrutiny</li>
+    <li>there’s a gap in services or knowledge about how to address a problem or provide effective services for a particular population</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Evaluating existing health products</h2>
+    <p>If you’re aiming to improve an existing health product, you need to carry out a formative evaluation. This involves continuously gaining feedback and improving your product based on the feedback you receive from your users.</p>
+
+</div>
+    <!--side menu-->
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+          <div class="govuk-accordion__section menu-vertical-line-blue">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1" style="color: black;">
+                1. Get started
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <p class='govuk-body'>Get started with evaluation with your team.</p>
+                <p class="selected-menu"><a href="preparetoevaluate.html">Prepare for evaluation</a></p>
+                <p><a href="howtobudget.html">Budget for evaluation</a></p>
+                <p><a href="buildyourteam.html">Build your team</a></p>
+                <p><a href="jointhecommunity.html">Join the evaluation community</a></p>
+            </div>
+          </div>
+          <div class="govuk-accordion__section menu-vertical-line">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  2. Define outcomes
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+              <p class='govuk-body'>Use a logic model and user journey to define your product's intended health outcomes with your team.</p>
+              <p><a href="logicmodel.html">Create a logic model</a></p>
+              <p><a href="userjourney.html">Map your user journey</a></p>
+            </div>
+          </div>
+          <div class="govuk-accordion__section menu-vertical-line">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  3. Choose success indicators
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+              <p class='govuk-body'>Identify which indicators will help you understand how your digital health intervention affect its intended health outcomes. Consider what data you’ll need to collect.</p>
+              <p><a href="indicators.html">Choose success indicators</a></p>
+            </div>
+          </div>
+          <div class="govuk-accordion__section menu-vertical-line">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  4. Choose your methods
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content " aria-labelledby="accordion-default-heading-4">
+              <p class='govuk-body'>Decide which evaluation methods are most appropriate for your health product.</p>
+              <p><a href="choosemethods.html">Choose your methods</a></p>
+              <p><a href="browsemethods.html">Browse evaluation methods</a></p>
+            </div>
+          </div>
+        <div class="govuk-accordion__section menu-vertical-line">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                5. Analyse your data
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class='govuk-body'>How to analyse the data you've collected using your methods.</p>
+            <p><a href="analyseyourdata.html">Analyse your data</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--side menu-->
+</div>
+<div class="next-page">
+    <p>
+      <a href="howtobudget.html" >
+      <div class="next-arrow" style="float: left;"><svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="22" width="25" viewBox="0 0 17 13">
+    <path fill="#1D70B8" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"/>
+</svg></div>
+  <div class="arrow-text" style="float: left; margin-left: 20px; font-size: 24px;">
+  <b>Next step</b><br><span style="text-decoration: underline; font-size: 19px;">Budget for evaluation</span></div>
+    </a>
+    </p>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+
+  {% endblock %}
+  <!--navigation-->
