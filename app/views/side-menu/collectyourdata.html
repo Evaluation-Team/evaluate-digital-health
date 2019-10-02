@@ -1,4 +1,6 @@
-{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+{% extends "layout.html" %} {% block pageTitle %} Start page example
+
+{% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -10,15 +12,7 @@
 
   gtag('config', 'UA-141128254-1');
 </script>
-
 {{ govukHeader() }} {% endblock %} {% block pageScripts %}
-<script src="/public/javascripts/step-by-step-navigation.js"></script>
-<script type="text/javascript">
-  var $element = $('#step-by-step-navigation')
-  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
-  stepByStepNavigation.start($element)
-</script>
-
 {% endblock %} {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -36,57 +30,25 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="side-menu-index.html">Evaluating Digital Health Products</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Budget for evaluation</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Collect your data</li>
   </ol>
-</div>
-
-<div class="govuk-column-full">
 
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Budget for evaluation</h1>
+    <h1 class="govuk-heading-xl">Collect your data</h1>
+    <p>This page is in progress.</p>
 
-    <p>While it’s recommended that you <a href="https://knowhow.ncvo.org.uk/how-to/how-to-fill-in-the-evaluation-questions-in-funding-applications-tips-for-small-groups">allocate 10% of your total project delivery budget to evaluation</a>, this may not be feasible or adequate for your project. Your evaluation budget should be proportionate to what you need to learn from your evaluation.</p>
-
-    <h2 class="govuk-heading-m">Scope of your evaluation</h2>
-
-    <p>You need to consider how extensive your evaluation should be. Conducting a robust evaluation is more cost-effective than having to repeat an evaluation because it was not adequately resourced. If you carry out a poorly resourced evaluation, you may:</p>
-    <ul class="govuk-list govuk-list--bullet">
-    <li>be unable to determine whether or not the project has had a positive health outcome</li>
-    <li>inadvertently continue with a project which has negligible or even negative impact</li>
-    <li>unintentionally continue with a project that is not cost-effective</li>
-    </ul>
-
-    <h2 class="govuk-heading-m">Setting up your evaluation</h2>
-    <p>The key steps to setting up an evaluation are: </p>
-    <ul class="govuk-list govuk-list--bullet">
-    <li><a href="logicmodel.html">define your health product’s intended outcomes</a></li>
-    <li><a href="indicators.html">choose your success indicators</a></li>
-    <li><a href="choosemethods.html">select appropriate methods</a></li>
-    </ul>
-    <p>Depending on which evaluation methods you choose, you’ll need to recruit participants to take part in your evaluation.</p>
-
-    <h2 class="govuk-heading-m">Carrying out the evaluation</h2>
-    <p>To successfully evaluate your health product, you’ll require a multidisciplinary team to:</p>
-    <ul class="govuk-list govuk-list--bullet">
-    <li>carry out the evaluation including data collection, analysis, sourcing tools and using data sets</li>
-    <li>manage relationships with internal colleagues and external organisations</li>
-    <li>provide guidance</li>
-    </ul>
-
-    <h2 class="govuk-heading-m">Analysing and sharing your findings</h2>
-    <p>You must record the findings of your evaluation before communicating them to the relevant people.</p>
-    <p>You should also use your findings to improve the design of your health product.</p>
 </div>
+
 <!--side menu-->
   <div class="govuk-grid-column-one-third">
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-      <div class="govuk-accordion__section menu-vertical-line-blue">
+      <div class="govuk-accordion__section menu-vertical-line">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-1" style="color: black;">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             1. Get started
             </span>
           </h2>
@@ -94,7 +56,7 @@
         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
           <p class='govuk-body'>Get started with evaluation with your team.</p>
             <p><a href="preparetoevaluate.html">Prepare for evaluation</a></p>
-            <p class="selected-menu"><a href="howtobudget.html">Budget for evaluation</a></p>
+            <p><a href="howtobudget.html">Budget for evaluation</a></p>
             <p><a href="buildyourteam.html">Build your team</a></p>
             <p><a href="jointhecommunity.html">Join the evaluation community</a></p>
         </div>
@@ -126,10 +88,10 @@
           <p><a href="indicators.html">Choose success indicators</a></p>
         </div>
       </div>
-      <div class="govuk-accordion__section menu-vertical-line">
+      <div class="govuk-accordion__section menu-vertical-line-blue">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4" style="color: black;">
               4. Choose your methods
             </span>
           </h2>
@@ -137,7 +99,7 @@
         <div id="accordion-default-content-4" class="govuk-accordion__section-content " aria-labelledby="accordion-default-heading-4">
           <p class='govuk-body'>Decide which evaluation methods are most appropriate for your health product.</p>
           <p><a href="choosemethods.html">Choose your methods</a></p>
-          <p><a href="browsemethods.html">Browse evaluation methods</a></p>
+          <p class="selected-menu"><a href="browsemethods.html">Browse evaluation methods</a></p>
         </div>
       </div>
     <div class="govuk-accordion__section menu-vertical-line">
@@ -154,11 +116,14 @@
       </div>
     </div>
   </div>
-</div>
 <!--side menu-->
+
+</div>
 </div>
 
-  </div>
-  </div>
-  {% endblock %}
-  <!--navigation-->
+
+            </div>
+
+</div>
+{% endblock %}
+<!--navigation-->
