@@ -123,7 +123,21 @@
 
 
             </div>
+            <script type="text/javascript">
+                $(() => {
+                  const prepUrlString = s => s.replace(/\.html$/i, '').toLocaleLowerCase(),
+                      currentLocation = document.location.href;
 
-</div>
+                  for ( let accordion of document.querySelectorAll('.govuk-accordion__section') ) {
+                    for ( let link of accordion.querySelectorAll('a') ) {
+                        if (prepUrlString(link.href) === currentLocation) {
+                            accordion.classList.add('govuk-accordion__section--expanded');
+                            break;
+                        }
+                        accordion.classList.remove('govuk-accordion__section--expanded')
+                    }
+                  }
+                });
+            </script>
 {% endblock %}
 <!--navigation-->
