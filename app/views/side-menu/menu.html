@@ -1,6 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %} Start page example
-
-{% endblock %} {% block header %}
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,7 +10,14 @@
 
   gtag('config', 'UA-141128254-1');
 </script>
+
 {{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-navigation.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+  stepByStepNavigation.start($element)
+</script>
 {% endblock %} {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -30,22 +35,25 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="side-menu-index.html">Evaluating Digital Health Products</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Share your findings</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">New page</li>
   </ol>
+</div>
 
+<div class="govuk-column-full">
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Share your findings</h1>
-    <p>This page is in progress.</p>
+<h1 class="govuk-heading-xl">
+New page</h1>
+
+<p>This page is in development.</p>
 
 </div>
-
 <!--side menu-->
   <div class="govuk-grid-column-one-third">
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-      <div class="govuk-accordion__section menu-vertical-line">
+      <div class="govuk-accordion__section menu-vertical-line-blue">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1" style="color: black;">
@@ -56,7 +64,7 @@
         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
             <p><a href="whatevaluationis.html">What evaluation is</a></p>
             <p><a href="whentoevaluate.html">Consider when to evaluate</a></p>
-            <p><a href="jointhecommunity.html">Get support</a></p>
+            <p class="selected-menu"><a href="jointhecommunity.html">Get support</a></p>
             <p><a href="howtobudget.html">Budget for evaluation</a></p>
         </div>
       </div>
@@ -119,7 +127,7 @@
         <p><a href="blank.html">Get help with quantitative analysis</a></p>
       </div>
       </div>
-    <div class="govuk-accordion__section menu-vertical-line-blue">
+    <div class="govuk-accordion__section menu-vertical-line">
       <div class="govuk-accordion__section-header">
         <h2 class="govuk-accordion__section-heading">
           <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -130,7 +138,7 @@
       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
         <p><a href="makerecommendations.html">Make recommendations</a></p>
         <p><a href="writeupyourfindings.html">Write up your findings</a></p>
-        <p class=selected-menu><a href="shareyourfindings.html">Share your findings</a></p>
+        <p><a href="shareyourfindings.html">Share your findings</a></p>
         <div class="govuk-accordion__section menu-vertical-line">
       </div>
     </div>

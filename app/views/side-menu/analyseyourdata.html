@@ -79,17 +79,16 @@
       <div class="govuk-accordion__section menu-vertical-line">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1" style="color: black;">
             1. Get started
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-          <p class='govuk-body'>Get started with evaluation with your team.</p>
-            <p><a href="preparetoevaluate.html">Prepare for evaluation</a></p>
+            <p><a href="whatevaluationis.html">What evaluation is</a></p>
+            <p><a href="whentoevaluate.html">Consider when to evaluate</a></p>
+            <p><a href="jointhecommunity.html">Get support</a></p>
             <p><a href="howtobudget.html">Budget for evaluation</a></p>
-            <p><a href="buildyourteam.html">Build your team</a></p>
-            <p><a href="jointhecommunity.html">Join the evaluation community</a></p>
         </div>
       </div>
       <div class="govuk-accordion__section menu-vertical-line">
@@ -101,49 +100,69 @@
           </h2>
         </div>
         <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-          <p class='govuk-body'>Use a logic model and user journey to define your product's intended health outcomes with your team.</p>
-          <p><a href="logicmodel.html">Create a logic model</a></p>
-          <p><a href="userjourney.html">Map your user journey</a></p>
+          <p><a href="logicmodel.html">Map how your product will create change</a></p>
+          <p><a href="logicmodelworkshop.html">Hold a workshop to model how your product works</a></p>
+          <p><a href="indicators.html">Choose your health outcome measures</a></p>
         </div>
       </div>
       <div class="govuk-accordion__section menu-vertical-line">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-              3. Choose success indicators
+              3. Design your evaluation
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-          <p class='govuk-body'>Identify which indicators will help you understand how your digital health intervention affect its intended health outcomes. Consider what data you’ll need to collect.</p>
-          <p><a href="indicators.html">Choose success indicators</a></p>
+          <p><a href="collectyourdata.html">Collect your data</a></p>
+          <p><a href="choosemethods.html">Choose your evaluation methods</a></p>
+          <p><a href="browsemethods.html">Browse evaluation methods</a></p>
         </div>
       </div>
       <div class="govuk-accordion__section menu-vertical-line">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-              4. Choose your methods
+              4. Carry out your evaluation
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-4" class="govuk-accordion__section-content " aria-labelledby="accordion-default-heading-4">
-          <p class='govuk-body'>Decide which evaluation methods are most appropriate for your health product.</p>
-          <p><a href="choosemethods.html">Choose your methods</a></p>
-          <p><a href="browsemethods.html">Browse evaluation methods</a></p>
+          <p><a href="blank.html">Decide who will do it</a></p>
+          <p><a href="blank.html">Record what you do</a></p>
+          <p><a href="getapproval.html">Get approval</a></p>
+          <p><a href="blank.html">Manage your evaluation</a></p>
         </div>
       </div>
     <div class="govuk-accordion__section menu-vertical-line-blue">
       <div class="govuk-accordion__section-header">
         <h2 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1" >
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
             5. Analyse your data
           </span>
         </h2>
       </div>
       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-        <p class='govuk-body'>How to analyse the data you've collected using your methods.</p>
-        <p class="selected-menu"><a href="analyseyourdata.html">Analyse your data</a></p>
+        <p class=selected-menu><a href="analyseyourdata.html">Match your analysis to your method</a></p>
+        <p><a href="blank.html">Analyse qualitative data</a></p>
+        <p><a href="blank.html">Prepare quantitative data</a></p>
+        <p><a href="blank.html">Analyse quantitative data</a></p>
+        <p><a href="blank.html">Get help with quantitative analysis</a></p>
+      </div>
+      </div>
+    <div class="govuk-accordion__section menu-vertical-line">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            6. Use your results
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+        <p><a href="makerecommendations.html">Make recommendations</a></p>
+        <p><a href="writeupyourfindings.html">Write up your findings</a></p>
+        <p><a href="shareyourfindings.html">Share your findings</a></p>
+        <div class="govuk-accordion__section menu-vertical-line">
       </div>
     </div>
   </div>
@@ -151,5 +170,24 @@
 </div>
 <!--side menu-->
 
+</div>
+  </div>
+
+  <script type="text/javascript">
+    $(() => {
+      const prepUrlString = s => s.replace(/\.html$/i, '').toLocaleLowerCase(),
+          currentLocation = document.location.href;
+
+      for ( let accordion of document.querySelectorAll('.govuk-accordion__section') ) {
+        for ( let link of accordion.querySelectorAll('a') ) {
+            if (prepUrlString(link.href) === currentLocation) {
+                accordion.classList.add('govuk-accordion__section--expanded');
+                break;
+            }
+            accordion.classList.remove('govuk-accordion__section--expanded')
+        }
+      }
+    });
+</script>
   {% endblock %}
   <!--navigation-->

@@ -33,12 +33,84 @@
     <li class="govuk-breadcrumbs__list-item" aria-current="page">Collect your data</li>
   </ol>
 
-{% endblock %} {% block content %}
+<br><br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">Collect your data</h1>
-    <p>This page is in progress.</p>
+    <p>There are different ways of collecting data on the users of a digital health product or service. Some of these are easy to do, others more time and resource-consuming. There are different sorts of data that you can collect – for example, quantitative versus qualitative data. Each has its pros and cons; the choice depends on what questions you want to answer and what resources you have available.</p>
+
+    <h2 class="govuk-heading-m">Data collection through the digital product</h2>
+    <p>Collecting data through the digital product is straightforward but has some limitations. It misses out individuals who have stopped using the product. It also often relies on self-report data, where an individual describes their own behaviour. This can be inaccurate compared to objective measures, as a person's self-report can be inaccurate or biased.</p>
+    <p>Data collection must <a href=getapproval.html target='_blank'>comply with GDPR.</a></p>
+
+    <h3 class="govuk-heading-s">App store data</h3>
+    <p>App stores, and equivalents for some other digital products, generally provide some statistics about an app: the number of downloads, and user ratings and reviews. You can access these very easily.</p>
+
+    <b>Downloads</b>
+    <p>The number of people who have downloaded a digital health product is a useful measure of impact. However, it is common for people to download an app but never use it, or only use it once. In a 2019 study, Baumel and colleagues found that, on average, only 4% of people were still using a mental health app 15 days after downloading it. Downloads cannot tell us about:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>longer-term engagement</li>
+    <li>whether a product is effective</li>
+  </ul>
+
+  <b>Reviews</b>
+  <p>App stores give average user ratings (quantitative data) and access to individual reviews (qualitative data). This is valuable feedback. User ratings and reviews also influence whether someone will download an app. Reviews of your product and rival products can help to inform improvements.</p>
+  <p>However, popular apps are not always the most effective. There is little relationship between an app’s ratings and its effectiveness. People leaving reviews may also not be representative of most users. They could be especially motivated to leave a good or bad review for a particular reason.</p>
+
+  <h3 class="govuk-heading-s">Usage data</h3>
+  <p>We often have data derived from usage of a digital product. This will vary depending on how the product has been coded. Think about what data you want to collect when developing your product.</p>
+  <p>Commonly-available data includes:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>when the user accesses the app or other software</li>
+  <li>what parts of the app/software they viewed</li>
+  </ul>
+  <p>Usage data takes us beyond counting downloads because it shows individuals are actually engaging with the product. Usage data is good for assessing engagement.</p>
+  <p>Usage data cannot show whether an app is effective. However, usage data may be correlated with outcome data. It is encouraging if we see what is called a dose-response relationship, that is, users who accesses the product more show a greater improvement in the outcome.</p>
+
+  <h3 class="govuk-heading-s">Data from smartphones and wearable devices</h3>
+  <p>Many digital devices support passive data collection: the data is recorded without the user having to do anything different. This reduces missing data and minimises biases associated with who records data.</p>
+  <p>Smartphones typically have motion sensors and location data, which can be used to estimate physical activity. These measures are not perfect. For example:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>users may not have the phone with them during exercise, for example when swimming</li>
+  <li>phones cannot always differentiate between activities</li>
+  <li>users might disable data collection if it impacts on battery usage</li>
+  <li>users may not consent to data collection</li>
+  </ul>
+
+  <p>User consent to data collection may depend on whether they see a benefit to it, for example, if they are using an app for self-tracking purposes.</p>
+  <p>Wearables offer further possibilities for passive data collection. Separate motion sensors may give more reliable data. Watch-like devices may directly measure some physiological indicators. Some devices are specific to certain conditions, like continuous glucometers used by some people with diabetes. These devices often work in conjunction with a smartphone.</p>
+  <p>Data collection can still be incomplete. Devices may require charging and upkeep, and people are sometimes selective in using devices. For example, they may choose not to wear a device when they know they are going to have a ‘lazy day’.</p>
+
+  <h3 class="govuk-heading-s">Self-tracking and self-report data</h3>
+  <p>Many digital health products will ask the user to input data. This is active data collection because it requires action from the individual, so incomplete data collection is a common problem.</p>
+  <p>Sometimes this data input directly assists the functioning of the app, for example, when the app is used for self-tracking. Users may track:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>behaviours, such as physical activity or diet</li>
+  <li>how they feel, for example with a symptom tracker</li>
+  </ul>
+  <p>These activities generate data that you can record.</p>
+  <p>You could also ask users questions directly, separate to the product's functions. For example, you can ask users:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>what they think of your product (to generate quantitative or qualitative data)</li>
+  <li>to complete standardised questionnaires, for example, the Alcohol Use Disorders Identification Test (AUDIT)</li>
+  <li>questions specific to your evaluation</li>
+  </ul>
+  <p>The questions you ask should be informed by your model of how your product works. Ask questions in a clear and neutral manner. It is worthwhile piloting your questions to see whether they work well.</p>
+  <p>This approach cannot tell you about the experience of non-users, although usage log data may tell you how big an issue that could be. These responses usually cannot tell you about the lasting effects of your product. For example, does an app to promote physical activity still have an impact 5 years later? We sometimes presume that non-users have seen no improvement in the outcome, but this may not be true. For example, it’s possible that a Couch to 5K user stopped using the app anymore because they became a confident and regular runner.</p>
+
+  <h2 class="govuk-heading-m">Linked data</h2>
+  <p>Data about an individual using a digital health product or service may be being collected for other reasons – for example, when they attend NHS services in person. This data may be useful to an evaluation.</p>
+  <p>In order to link data from another source to your evaluation of a digital health product, you need to be able to identify the user of the product with the data obtained from elsewhere. That presents legal and technical challenges. You should discuss this with the relevant NHS body.</p>
+
+  <h2 class="govuk-heading-m">Data collection outside the digital product</h2>
+  <p>Sometimes the best way to collect data on an individual is to go to them directly, outside of and separate to the digital health product. For example, it may be possible to contact the user through a previously provided email or postal address. You might:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>send a questionnaire by email or post</li>
+  <li>meet the user in person</li>
+  </ul>
+  <p>While these approaches also have problems with response rates, they are better at reaching people who have disengaged from the digital product.</p>
+  <p>In some cases, you will want to collect more objective data from individuals, which might require specific testing. For example, measuring cotinine levels in saliva to objectively measure smoking behaviour requires saliva samples to be collected.</p>
 
 </div>
 
@@ -48,17 +120,16 @@
       <div class="govuk-accordion__section menu-vertical-line">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1" style="color: black;">
             1. Get started
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-          <p class='govuk-body'>Get started with evaluation with your team.</p>
-            <p><a href="preparetoevaluate.html">Prepare for evaluation</a></p>
+            <p><a href="whatevaluationis.html">What evaluation is</a></p>
+            <p><a href="whentoevaluate.html">Consider when to evaluate</a></p>
+            <p><a href="jointhecommunity.html">Get support</a></p>
             <p><a href="howtobudget.html">Budget for evaluation</a></p>
-            <p><a href="buildyourteam.html">Build your team</a></p>
-            <p><a href="jointhecommunity.html">Join the evaluation community</a></p>
         </div>
       </div>
       <div class="govuk-accordion__section menu-vertical-line">
@@ -70,36 +141,38 @@
           </h2>
         </div>
         <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-          <p class='govuk-body'>Use a logic model and user journey to define your product's intended health outcomes with your team.</p>
-          <p><a href="logicmodel.html">Create a logic model</a></p>
-          <p><a href="userjourney.html">Map your user journey</a></p>
-        </div>
-      </div>
-      <div class="govuk-accordion__section menu-vertical-line">
-        <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-              3. Choose success indicators
-            </span>
-          </h2>
-        </div>
-        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-          <p class='govuk-body'>Identify which indicators will help you understand how your digital health intervention affect its intended health outcomes. Consider what data you’ll need to collect.</p>
-          <p><a href="indicators.html">Choose success indicators</a></p>
+          <p><a href="logicmodel.html">Map how your product will create change</a></p>
+          <p><a href="logicmodelworkshop.html">Hold a workshop to model how your product works</a></p>
+          <p><a href="indicators.html">Choose your health outcome measures</a></p>
         </div>
       </div>
       <div class="govuk-accordion__section menu-vertical-line-blue">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-4" style="color: black;">
-              4. Choose your methods
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              3. Design your evaluation
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <p class=selected-menu><a href="collectyourdata.html">Collect your data</a></p>
+          <p><a href="choosemethods.html">Choose your evaluation methods</a></p>
+          <p><a href="browsemethods.html">Browse evaluation methods</a></p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section menu-vertical-line">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              4. Carry out your evaluation
             </span>
           </h2>
         </div>
         <div id="accordion-default-content-4" class="govuk-accordion__section-content " aria-labelledby="accordion-default-heading-4">
-          <p class='govuk-body'>Decide which evaluation methods are most appropriate for your health product.</p>
-          <p><a href="choosemethods.html">Choose your methods</a></p>
-          <p class="selected-menu"><a href="browsemethods.html">Browse evaluation methods</a></p>
+          <p><a href="blank.html">Decide who will do it</a></p>
+          <p><a href="blank.html">Record what you do</a></p>
+          <p><a href="getapproval.html">Get approval</a></p>
+          <p><a href="blank.html">Manage your evaluation</a></p>
         </div>
       </div>
     <div class="govuk-accordion__section menu-vertical-line">
@@ -111,19 +184,51 @@
         </h2>
       </div>
       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-        <p class='govuk-body'>How to analyse the data you've collected using your methods.</p>
-        <p><a href="analyseyourdata.html">Analyse your data</a></p>
+        <p><a href="analyseyourdata.html">Match your analysis to your method</a></p>
+        <p><a href="blank.html">Analyse qualitative data</a></p>
+        <p><a href="blank.html">Prepare quantitative data</a></p>
+        <p><a href="blank.html">Analyse quantitative data</a></p>
+        <p><a href="blank.html">Get help with quantitative analysis</a></p>
+      </div>
+      </div>
+    <div class="govuk-accordion__section menu-vertical-line">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            6. Use your results
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+        <p><a href="makerecommendations.html">Make recommendations</a></p>
+        <p><a href="writeupyourfindings.html">Write up your findings</a></p>
+        <p><a href="shareyourfindings.html">Share your findings</a></p>
+        <div class="govuk-accordion__section menu-vertical-line">
       </div>
     </div>
   </div>
+</div>
+</div>
 <!--side menu-->
 
 </div>
-</div>
+  </div>
 
+  <script type="text/javascript">
+    $(() => {
+      const prepUrlString = s => s.replace(/\.html$/i, '').toLocaleLowerCase(),
+          currentLocation = document.location.href;
 
-            </div>
-
-</div>
-{% endblock %}
-<!--navigation-->
+      for ( let accordion of document.querySelectorAll('.govuk-accordion__section') ) {
+        for ( let link of accordion.querySelectorAll('a') ) {
+            if (prepUrlString(link.href) === currentLocation) {
+                accordion.classList.add('govuk-accordion__section--expanded');
+                break;
+            }
+            accordion.classList.remove('govuk-accordion__section--expanded')
+        }
+      }
+    });
+</script>
+  {% endblock %}
+  <!--navigation-->
