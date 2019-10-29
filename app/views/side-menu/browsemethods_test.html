@@ -1,6 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %} Start page example
-
-{% endblock %} {% block header %}
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,7 +10,14 @@
 
   gtag('config', 'UA-141128254-1');
 </script>
+
 {{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-navigation.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+  stepByStepNavigation.start($element)
+</script>
 {% endblock %} {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -30,15 +35,87 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="side-menu-index.html">Evaluating Digital Health Products</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendations</li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="choosemethods.html">Choose your methods</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Browse evaluation methods</li>
   </ol>
+</div>
+
+<div class="govuk-column-full">
 
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Make recommendations</h1>
-    <p>This page is in progress.</p>
+<h1 class="govuk-heading-xl">Browse evaluation methods</h1>
+
+<h2 class="govuk-heading-m"><a href=descriptivemethods.html target="_blank">Descriptive studies</a></h2>
+
+<p>Understand how things are going (without comparing to something else)</p>
+
+<h3 class="govuk-heading-s">Use them when:</h3>
+<ul class="govuk-list govuk-list--bullet">
+<li>your product is in use, to check it works and has no unintended consequences (post-implementation or ex-post evaluation)</li>
+<li>your product is about to be in use and can be tested with a pilot group to see how it works in practice</li>
+</ul>
+
+<h3 class="govuk-heading-s">They answer questions like:</h3>
+<ul class="govuk-list">
+<li>How many people are using your product?</li>
+<li>How many people remain engaged with the product?</li>
+<li>How often do they use it?</li>
+<li>Do users like the product?</li>
+<li>Do users do well on the product?</li>
+</ul>
+
+<h3 class="govuk-heading-s">Methods include:</h3>
+<p><a href=abtesting.html target="_blank">Audit</a></p>
+<p><a href=abtesting.html target="_blank">Service evaluation</a></p>
+<p><a href=abtesting.html target="_blank">Analysis of usage data</a></p>
+
+<hr style="">&nbsp;</hr>
+
+<h2 class="govuk-heading-m"><a href=comparitivestudies.html target="_blank">Comparative studies</a></h2>
+<p>See whether your digital health product works</p>
+<h3 class="govuk-heading-s">Use them when:</h3>
+<ul class="govuk-list govuk-list--bullet">
+<li>you want to know how effective your product is, for example, in comparison to not using your product or to using another product</li>
+<li>you are launching your product, or soon after (summative evaluation)</li>
+</ul>
+
+<h3 class="govuk-heading-s">They answer questions like:</h3>
+<ul class="govuk-list">
+<li>What is the difference in health outcomes between people using your product now and how people did before your product was available?</li>
+<li>What is the difference between people using your product and people using a rival product?</li>
+<li>What is the difference between people using two versions of your product?</li>
+</ul>
+
+<h3 class="govuk-heading-s">Methods include:</h3>
+<p><a href=abtesting.html target="_blank">Before/after study</a></p>
+<p><a href=abtesting.html target="_blank">Randomised control trial</a></p>
+<p><a href=abtesting.html target="_blank">A/B testing</a></p>
+
+<hr style="">&nbsp;</hr>
+
+<h2 class="govuk-heading-m"><a href=qualitativestudies.html target="_blank">Qualitative studies</a></h2>
+<p>Understand how people feel about your product</p>
+<h3 class="govuk-heading-s">Use them when:</h3>
+<ul class="govuk-list govuk-list--bullet">
+<li>you want a more in-depth understanding of users’ thoughts and experiences of your product</li>
+<li>you’re developing your product, to work out how to make it better (formative or iterative evaluation)</li>
+</ul>
+<h3 class="govuk-heading-s">They answer questions like:</h3>
+<ul class="govuk-list">
+<li>What was users’ overall experience of the product?</li>
+<li>How did users feel during their journey through the product?</li>
+<li>What do users want to see in a new version of the product</li>
+</ul>
+
+<h3 class="govuk-heading-s">Methods include:</h3>
+<p><a href=abtesting.html target="_blank">Interviews</a></p>
+<p><a href=abtesting.html target="_blank">Focus groups</a></p>
+<p><a href=abtesting.html target="_blank">Ethnographic studies</a></p>
 
 </div>
 
@@ -74,7 +151,7 @@
           <p><a href="indicators.html">Choose your health outcome measures</a></p>
         </div>
       </div>
-      <div class="govuk-accordion__section menu-vertical-line">
+      <div class="govuk-accordion__section menu-vertical-line-blue">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
@@ -85,7 +162,7 @@
         <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
           <p><a href="collectyourdata.html">Collect your data</a></p>
           <p><a href="choosemethods.html">Design your study</a></p>
-          <p><a href="browsemethods.html">Browse evaluation methods</a></p>
+          <p class=selected-menu><a href="browsemethods.html">Browse evaluation methods</a></p>
         </div>
       </div>
       <div class="govuk-accordion__section menu-vertical-line">
@@ -119,7 +196,7 @@
         <p><a href="blank.html">Get help with quantitative analysis</a></p>
       </div>
       </div>
-    <div class="govuk-accordion__section menu-vertical-line-blue">
+    <div class="govuk-accordion__section menu-vertical-line">
       <div class="govuk-accordion__section-header">
         <h2 class="govuk-accordion__section-heading">
           <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -128,7 +205,7 @@
         </h2>
       </div>
       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-        <p class=selected-menu><a href="makerecommendations.html">Make recommendations</a></p>
+        <p><a href="makerecommendations.html">Make recommendations</a></p>
         <p><a href="writeupyourfindings.html">Write up your findings</a></p>
         <p><a href="shareyourfindings.html">Share your findings</a></p>
         <div class="govuk-accordion__section menu-vertical-line">

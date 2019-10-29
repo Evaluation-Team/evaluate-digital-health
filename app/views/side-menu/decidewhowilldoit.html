@@ -1,6 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %} Start page example
-
-{% endblock %} {% block header %}
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,7 +10,14 @@
 
   gtag('config', 'UA-141128254-1');
 </script>
+
 {{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-navigation.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+  stepByStepNavigation.start($element)
+</script>
 {% endblock %} {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -30,18 +35,45 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="side-menu-index.html">Evaluating Digital Health Products</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendations</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Decide who will do it</li>
   </ol>
+</div>
 
+<div class="govuk-column-full">
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Make recommendations</h1>
-    <p>This page is in progress.</p>
+<h1 class="govuk-heading-xl">Decide who will do it</h1>
+
+<p>You will need to decide whether to conduct an evaluation in your team or commission external evaluators. This might depend on:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>your budget</li>
+<li>your resources (staff numbers and available time)</li>
+<li>the skills in your team – for example, do you have an evaluation expert or a data analyst</li>
+<li>the complexity of the evaluation</li>
+<li>whether an independent evaluation is needed to make the process more objective or give it more credibility</li>
+</ul>
+
+<p>Whether you are conducting evaluation internally or externally, you will need one person to lead the evaluation process and you may want to set up a steering group.</p>
+
+<h2 class="govuk-heading-l">Carry out evaluation in your team</h2>
+<p>Evaluation requires a range of different skills and knowledge, so benefits from having a multidisciplinary team. Someone who has no evaluation experience can still conduct and take part in many evaluation activities, such as creating a model of how your product works.</p>
+<p>You should reach out to colleagues with relevant evaluation experience. They can provide support for your project and help fill skills gaps in your team. For example, if you want to use a qualitative method for your evaluation, seek support from someone who has experience of those methods.</p>
+<p>It’s best to involve specialists at an early stage in the evaluation planning process. Statisticians shouldn’t only become involved when it comes to analysing data. They should be involved in decisions about the evaluation question, sampling and data collection. Developers should also be involved as early as possible to make sure you can collect the data you need for your chosen evaluation method.</p>
+
+<h2 class="govuk-heading-l">Commission an external evaluation</h2>
+<p>If an external team is conducting your evaluation, you will still need to:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>find a suitable evaluation team – your organisation may have its own tendering processes</li>
+<li>write a detailed brief</li>
+<li>stay in touch while the evaluation is being carried out</li>
+</ul>
+
+<h2 class="govuk-heading-l">Combine approaches</h2>
+<p>You may be able to combine approaches, carrying out some activities in your team and commissioning an external team for other activities. For example, your team might collect data and an external team could analyse it and report back. This could help to reduce the costs of using external evaluators, while reducing the need for particular skills and experience in your team. If you choose this approach, you should still involve the external team at an early stage in the process. For example, you need to make sure that data you collect can be analysed in the way you expect.</p>
 
 </div>
-
 <!--side menu-->
   <div class="govuk-grid-column-one-third">
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -119,7 +151,7 @@
         <p><a href="blank.html">Get help with quantitative analysis</a></p>
       </div>
       </div>
-    <div class="govuk-accordion__section menu-vertical-line-blue">
+    <div class="govuk-accordion__section menu-vertical-line">
       <div class="govuk-accordion__section-header">
         <h2 class="govuk-accordion__section-heading">
           <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -128,7 +160,7 @@
         </h2>
       </div>
       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-        <p class=selected-menu><a href="makerecommendations.html">Make recommendations</a></p>
+        <p><a href="makerecommendations.html">Make recommendations</a></p>
         <p><a href="writeupyourfindings.html">Write up your findings</a></p>
         <p><a href="shareyourfindings.html">Share your findings</a></p>
         <div class="govuk-accordion__section menu-vertical-line">

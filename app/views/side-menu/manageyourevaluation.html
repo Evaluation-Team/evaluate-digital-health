@@ -1,6 +1,4 @@
-{% extends "layout.html" %} {% block pageTitle %} Start page example
-
-{% endblock %} {% block header %}
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -12,7 +10,14 @@
 
   gtag('config', 'UA-141128254-1');
 </script>
+
 {{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-navigation.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.StepByStepNavigation()
+  stepByStepNavigation.start($element)
+</script>
 {% endblock %} {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -30,18 +35,69 @@
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="side-menu-index.html">Evaluating Digital Health Products</a>
     </li>
-    <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendations</li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Manage your evaluation</li>
   </ol>
+</div>
 
+<div class="govuk-column-full">
 {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Make recommendations</h1>
-    <p>This page is in progress.</p>
+<h1 class="govuk-heading-xl">Manage your evaluation</h1>
+
+<p>Whether you’re carrying out your evaluation in-house or an external evaluator is conducting it, you will want someone in your team to lead the evaluation. Decide who this should be. You do not need prior evaluation experience to lead evaluation activities.</p>
+
+<h2 class="govuk-heading-m">Plan your evaluation early</h2>
+
+<p>Always design evaluation into the project from the start. It should be integrated into the development of your product.</p>
+<p>Ensure your team has the budget, people and time needed to carry out the evaluation as intended.</p>
+<p>If you have not planned evaluation at an early stage, you will probably still be able to carry out some evaluation activities, but they may have limitations. For example, you may realise that your digital health product is not collecting the data you need about users to answer your evaluation questions.</p>
+
+<h2 class="govuk-heading-m">Decide who will make decisions</h2>
+
+<p>Decide who will make decisions. You may want to set up an evaluation steering group. This would include key stakeholders, relevant experts, and possibly patient or public representatives.</p>
+<p>Steering group responsibilities could include:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>making important decisions, such as the scope and focus of the evaluation</li>
+<li>helping to develop the evaluation methodology</li>
+<li>deciding which evidence standards the evaluation should achieve, such as the <a href=https://www.nice.org.uk/about/what-we-do/our-programmes/evidence-standards-framework-for-digital-health-technologies target="_blank">NICE Evidence Standards</a></li>
+<li>providing feedback on interim findings</li>
+<li>keeping the project on track</li>
+</ul>
+
+<h2 class="govuk-heading-m">Develop an evaluation brief</h2>
+
+<p>You will need to write a brief if you are commissioning an external evaluation, but it can be useful to write one anyway. This helps to set expectations of what the evaluation will and won’t achieve.</p>
+<p>Some details will overlap with your plan or protocol, but a brief should also contain more information about practicalities, such as responsibilities, budget, and a detailed work plan. If you are using an external evaluator, it should say how you will work together.</p>
+<p>If you are carrying out some evaluation activities yourself and others are being carried out externally, you should explain what the split will be and how you will communicate findings to each other.</p>
+
+<h2 class="govuk-heading-m">Set a schedule</h2>
+
+<p>It’s easy to underestimate the time it will take to carry out your evaluation. Remember to include time for:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>planning</li>
+<li>engaging stakeholders</li>
+<li>tendering processes, if using an external evaluator</li>
+<li>getting ethical approval and consents</li>
+<li>recruiting participants</li>
+<li>collecting data</li>
+<li>feedback on interim reports</li>
+<li>analysing data</li>
+<li>feedback on final reports</li>
+<li>making recommendations</li>
+<li>sharing findings</li>
+</ul>
+
+<p>State who is responsible for carrying out each task and check for any dependencies.</p>
+
+<h2 class="govuk-heading-m">Monitor progress</h2>
+
+<p>Maintain control of the evaluation process as it progresses.</p>
+<p>If you are using an external evaluator, you will probably want regular meetings with them to check progress and make sure they are following your brief. For example, you may want to check that recruitment of participants is on track.</p>
+<p>If anything changes, you may need to adjust your plan. This could be a small change, for example, to your schedule, or a larger change, for example, to the scope. If this happens, you will need to agree these changes and communicate them effectively. You should also make sure you record what changed and why.</p>
 
 </div>
-
 <!--side menu-->
   <div class="govuk-grid-column-one-third">
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -119,7 +175,7 @@
         <p><a href="blank.html">Get help with quantitative analysis</a></p>
       </div>
       </div>
-    <div class="govuk-accordion__section menu-vertical-line-blue">
+    <div class="govuk-accordion__section menu-vertical-line">
       <div class="govuk-accordion__section-header">
         <h2 class="govuk-accordion__section-heading">
           <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -128,7 +184,7 @@
         </h2>
       </div>
       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-        <p class=selected-menu><a href="makerecommendations.html">Make recommendations</a></p>
+        <p><a href="makerecommendations.html">Make recommendations</a></p>
         <p><a href="writeupyourfindings.html">Write up your findings</a></p>
         <p><a href="shareyourfindings.html">Share your findings</a></p>
         <div class="govuk-accordion__section menu-vertical-line">
